@@ -1,0 +1,19 @@
+.hotArt{
+  padding:20px;
+  .tit{
+    font-size: 16px;
+    padding:15px 0px;
+  }
+  .list{
+    font-size: 14px;
+    color: #666;
+    height:28px;
+    margin-left:10px;
+    a{
+      color: inherit;
+      &:hover{
+        border-bottom: 1px solid #999;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.list{
+  box-sizing: border-box;
+  padding:10px 0px;
+  position: relative;
+  &:after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    background-color: #f1f1f1;
+    width:200px;
+    left:0;
+    bottom:0;
+  }
+  .list_tit{
+    width: 100%;
+    font-weight: 400;
+    line-height: 36px;
+    font-size: 18px;
+    color: #333;
+  }
+  .list_desc{
+    font-size: 14px;
+    color: #666;
+    line-height: 28px;
+  }
+  .list_info{
+    font-size: 12px;
+    line-height: 28px;
+    color: #999;
+  }
+}
