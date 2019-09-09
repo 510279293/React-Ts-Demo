@@ -26,12 +26,15 @@ class Nav extends React.Component{
           txt: '留言',
           routeTo: '/my/feedme'
         },
+        {
+          txt: '其他',
+          routeTo: '/my/other'
+        },
      ]
     }
   }
   render(){
     let path = this.props.location.pathname
-    console.log(path)
     return(
       <ul className={styles.nav}>
         {

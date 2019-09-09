@@ -1,0 +1,24 @@
+.filelogList{
+  margin-bottom: 16px;
+  .tit{
+    line-height: 32px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 8px;
+  }
+  p{
+    padding-left: 14px;
+  }
+  .item{
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    line-height: 32px;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

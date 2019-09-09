@@ -1,0 +1,32 @@
+.myinfo{
+  width:300px;
+  min-width: 300px;
+  background: #fff;
+  box-sizing: border-box;
+  padding:20px;
+  dl{
+    text-align: center;
+    dt{
+      img{
+        width:136px;
+        height:136px;
+        border-radius: 50%;
+      }
+    }
+    dd{
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+  }
+  p{
+    width: 100%;
+    display: flex;
+    color: #333;
+    font-size: 14px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    i{
+      margin-right:10px;
+    }
+  }
+}

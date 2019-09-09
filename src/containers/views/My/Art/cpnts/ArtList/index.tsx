@@ -7,7 +7,7 @@ class ArtList extends React.Component{
       <div className={styles.list}>
         <h3 className={styles.list_tit}>canvas画1px线条的高清终极解决方案</h3>
         <p className={styles.list_desc}>1px线条的高清终极解决方案</p>
-        <p className={styles.list_info}>2019.03.26  195次阅读  2条评论  17人喜欢</p>
+        <p className={styles.list_info}>2019.03.26 <i className="iconfont icondian"></i> 195次阅读 <i className="iconfont icondian"></i> 2条评论 <i className="iconfont icondian"></i> 17人喜欢</p>
       </div>
     )
   }

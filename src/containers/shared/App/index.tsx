@@ -3,7 +3,6 @@ import {hot} from 'react-hot-loader'
 import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import Loadable from 'react-loadable'
 import Load from '@components/Load'
-console.log(Load)
 
 const Home = Loadable({loader: () => import('@views/Home'), loading: Load})
 const Page = Loadable({loader: () => import('@views/Page'), loading: Load})
@@ -12,6 +11,7 @@ const Art = Loadable({loader: () => import('@views/My/Art'), loading: Load})
 const Filelog = Loadable({loader: () => import('@views/My/Filelog'), loading: Load})
 const About = Loadable({loader: () => import('@views/My/About'), loading: Load})
 const Feedme = Loadable({loader: () => import('@views/My/Feedme'), loading: Load})
+const Others = Loadable({loader: () => import('@views/My/Others'), loading: Load})
  @hot(module)
  class App extends React.Component{
    render(){
@@ -25,6 +25,7 @@ const Feedme = Loadable({loader: () => import('@views/My/Feedme'), loading: Load
               <Route  path="/my/filelog" component={Filelog} />
               <Route  path="/my/about" component={About} />
               <Route  path="/my/feedme" component={Feedme} />
+              <Route  path="/my/other" component={Others} />
            </My>
          </Switch>
        </Router>

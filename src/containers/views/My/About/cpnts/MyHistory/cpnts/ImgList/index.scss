@@ -1,0 +1,32 @@
+.imgwarp{
+  height:100px;
+  width: 120px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 10px 10px 0px 0px;
+  position: relative;
+  &:after{
+    opacity: 0;
+    z-index: 99;
+    content: "";
+    position: absolute;
+    color: #fff;
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 100px;
+    background: url('/src/assets/img/zoomIn.png') no-repeat 50% rgba(0,0,0,.7);
+    background-size: 30px;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
+  }
+  &:hover{
+    &:after{
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+  .img{
+    height:100%;
+  }
+}
