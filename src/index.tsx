@@ -7,7 +7,8 @@ import '@assets/styles/index.scss' // 重置样式库
 import 'antd/dist/antd.css' // antd 样式库
 import App from '@shared/App'
 import * as store from './store'
-configure({enforceActions: 'observed'})
+
+configure({enforceActions: 'observed'});
 
 const render = () => {
   ReactDOM.render(

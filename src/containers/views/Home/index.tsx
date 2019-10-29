@@ -4,9 +4,15 @@ import Footer from '@components/Footer/index'
 import {Button} from 'antd'
 import {Link} from 'react-router-dom'
 import * as styles from './index.scss'
+import {userInfo } from '@service/homeApi'
 
 class Home extends ComponentExt{
+  async userInfo() {
+    const res = await userInfo();
+    console.log(res)
+  }
   render() {
+    this.userInfo()
     return(<div className={styles.home}>
       <div className={styles.mask}>
         <div className={styles.my_index}>

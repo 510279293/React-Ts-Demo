@@ -7,7 +7,7 @@ const fileRules = require('./rules/fileRules')
 const optimization = require('./optimization')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
-module.exports = {
+const webPackConfig = {
   entry: {
     app: path.join(__dirname, '../', 'src/index.tsx')
   },
@@ -34,3 +34,5 @@ module.exports = {
   ],
   optimization
 }
+
+module.exports = webPackConfig;

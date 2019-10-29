@@ -2,6 +2,7 @@ import * as React from 'react'
 import {ComponentExt} from '@utils/reactExt'
 import { any } from 'prop-types';
 import * as styles from './index.scss';
+import Interface from './cpnts/interface';
 
 const VOICE_MAP = {
   0: [261.63, 293.67, 329.63, 349.23, 391.99, 440, 493.88],
@@ -85,6 +86,7 @@ class Others extends ComponentExt{
       {renderSpan(0)}
       {renderSpan(1)}
       {renderSpan(2)}
+      <Interface />
     </div>)
   }
 }

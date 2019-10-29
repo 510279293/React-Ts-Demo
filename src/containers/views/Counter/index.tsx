@@ -28,4 +28,4 @@ class Counter extends ComponentExt<IProps> {
   }
 }
 
-export default Counter
+export default Counter;
