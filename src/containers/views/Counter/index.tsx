@@ -4,20 +4,21 @@ import { inject, observer } from 'mobx-react';
 import {hot} from 'react-hot-loader'
 
 interface IProps {
-  globalStore?: IGlobalStore.GlobalStore
+  testStore?: IGlobalStore.testStore
 }
+
 @hot(module)
-@inject('globalStore')
+@inject('testStore')
 @observer
 class Counter extends ComponentExt<IProps> {
   increase = () => {
-    this.props.globalStore.increase(1)
+    this.props.testStore.increase(1)
   }
   decrease = () => {
-    this.props.globalStore.decrease(1)
+    this.props.testStore.decrease(1)
   }
   render() {
-    const {num} = this.props.globalStore
+    const {num} = this.props.testStore
     return (
       <div>
         <div>{num}</div>

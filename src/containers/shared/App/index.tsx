@@ -12,6 +12,8 @@ const Filelog = Loadable({loader: () => import('@views/My/Filelog'), loading: Lo
 const About = Loadable({loader: () => import('@views/My/About'), loading: Load})
 const Feedme = Loadable({loader: () => import('@views/My/Feedme'), loading: Load})
 const Others = Loadable({loader: () => import('@views/My/Others'), loading: Load})
+
+const Counter = Loadable({loader: () => import('@views/Counter'), loading: Load})
  @hot(module)
  class App extends React.Component{
    render(){
@@ -20,6 +22,7 @@ const Others = Loadable({loader: () => import('@views/My/Others'), loading: Load
          <Switch>
            <Route exact path="/" component={Home} />
            <Route path="/page" component={Page} />
+           <Route path="/test" component={Counter} />
            <My path="/my" component={My}>
               <Route  path="/my/art" component={Art} />
               <Route  path="/my/filelog" component={Filelog} />
