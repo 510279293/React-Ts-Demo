@@ -5,26 +5,9 @@ import Footer from '@components/Footer/index'
 import {Button} from 'antd'
 import {Link} from 'react-router-dom'
 import * as styles from './index.scss'
-import {userInfo } from '@service/homeApi'
-
-interface IProps {
-  userStore?: IGlobalStore.userStore
-}
-interface Res {
-  nickName?: String;
-  quotes?: String;
-  avatar?: String;
-}
 @inject('userStore')
 @observer
-class Home extends ComponentExt<IProps>{
-  async userInfoApi() {
-    const res: Res = await userInfo();
-    this.props.userStore.setUserInfo(res.data);
-  }
-  componentDidMount(){
-    this.userInfoApi();
-  }
+class Home extends ComponentExt{
   render() {
     const {userInfo = {}} = this.props.userStore;
     return(<div className={styles.home}>

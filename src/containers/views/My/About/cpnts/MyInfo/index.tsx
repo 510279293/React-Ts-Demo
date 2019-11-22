@@ -2,13 +2,9 @@ import * as React from 'react'
 import * as styles from './index.scss'
 import {Button} from 'antd'
 import { inject, observer } from 'mobx-react';
-
-interface IProps {
-  userStore?: IGlobalStore.userStore
-}
 @inject('userStore')
 @observer
-class MyInfo extends React.Component<IProps>{
+class MyInfo extends React.Component{
   render(){
     const {userInfo = {}} = this.props.userStore;
     return(<div className={styles.myinfo}>

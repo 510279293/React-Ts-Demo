@@ -2,12 +2,18 @@ import * as React from 'react'
 import * as styles from './index.scss'
  
 class FileLogList extends React.Component{
+  constructor(props:any){
+    super(props)
+  }
   render(){
+    const {date, articles} = this.props;
     return(<div className={styles.filelogList}>
-      <div className={styles.tit}>2019/06(1)</div>
-      <p><i className="iconfont icondian"></i><a className={styles.item}>关于Node.js你需要知道的几点</a></p>
-      <p><i className="iconfont icondian"></i><a className={styles.item}>关于Node.js你需要知道的几点</a></p>
-      <p><i className="iconfont icondian"></i><a className={styles.item}>关于Node.js你需要知道的几点</a></p>
+  <div className={styles.tit}>{date}({articles.length})</div>
+      {
+        articles.map((v:any,i:any) => (
+        <p key={i}><i className="iconfont icondian"></i><a className={styles.item}>{v.art_name}</a></p>
+        ))
+      }
     </div>)
   }
 }

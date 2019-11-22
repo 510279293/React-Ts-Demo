@@ -4,13 +4,28 @@ import HotArt from '@components/HotArt'
 import HotTags from '@components/HotTags'
 import FileLogList from './cpnts/FilelogList'
 import * as styles from './index.scss'
+import {filelogList} from '@service/filelogApi';
 class Filelog extends ComponentExt{
+  constructor(props:any){
+    super(props);
+    this.state = {
+      list: [],
+    }
+  }
+  async componentDidMount(){
+    const {data} = await filelogList();
+    this.setState({
+      list: data.list
+    })
+  }
   render(){
     return(<div className={styles.filelog}>
       <div className={styles.filelogListWarp}>
-        <FileLogList />
-        <FileLogList />
-        <FileLogList />
+        {
+          this.state.list.map((v:any,i:any) => (
+            <FileLogList key={i} {...v} />
+          ))
+        }
       </div>
       <div className={styles.hotPart}>
         <HotArt />

@@ -1,8 +1,8 @@
 import request from  '@utils/request';
 
-export async function userInfo() {
+export async function filelogList() {
   return request({
-    api: '/clientApi/user/info',
+    api: '/clientApi/filelog/list',
     disableCommonSuccessHandler: true,
   })
 }

@@ -2,6 +2,9 @@ import * as React from 'react'
 import {hot} from 'react-hot-loader'
 import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import Loadable from 'react-loadable'
+import { inject, observer } from 'mobx-react';
+import {userInfo } from '@service/homeApi';
+import {articleHot } from '@service/articleApi';
 import Load from '@components/Load'
 
 const Home = Loadable({loader: () => import('@views/Home'), loading: Load})
@@ -14,8 +17,26 @@ const Feedme = Loadable({loader: () => import('@views/My/Feedme'), loading: Load
 const Others = Loadable({loader: () => import('@views/My/Others'), loading: Load})
 
 const Counter = Loadable({loader: () => import('@views/Counter'), loading: Load})
- @hot(module)
- class App extends React.Component{
+ 
+interface IProps {
+  userStore?: IGlobalStore.userStore;
+  // hotPartStore?: IGlobalStore.hotPartStore;
+}
+interface Res {
+  nickName?: String;
+  quotes?: String;
+  avatar?: String;
+}
+@hot(module)
+@inject('userStore','hotPartStore')
+@observer
+ class App extends React.Component<IProps>{
+   async componentDidMount(){
+    const res: Res = await userInfo();
+    this.props.userStore.setUserInfo(res.data);
+    const hotPart = await articleHot();
+    this.props.hotPartStore.setHotList(hotPart.data.list)
+   }
    render(){
      return(
        <Router>

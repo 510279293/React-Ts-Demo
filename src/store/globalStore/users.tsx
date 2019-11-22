@@ -1,6 +1,6 @@
 import {observable, action} from 'mobx';
 
-export class Users{
+export class userStore{
    @observable
    userInfo: Object = {};
 
@@ -10,4 +10,4 @@ export class Users{
    } 
 }
 
-export default new Users();
+export default new userStore();
