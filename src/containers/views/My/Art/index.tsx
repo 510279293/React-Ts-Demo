@@ -16,7 +16,7 @@ class Art extends ComponentExt{
   async articleListApi(){
     const { data } = await articleList();
     this.setState({
-      artList: data.list,
+      artList: data,
     })
   }
   componentDidMount() {

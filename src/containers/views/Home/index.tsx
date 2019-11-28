@@ -14,7 +14,7 @@ class Home extends ComponentExt{
       <div className={styles.mask}>
         <div className={styles.my_index}>
           <img src="src/assets/img/head.jpg" />
-          <h3 className={styles.my_tit}>{userInfo.nickName}</h3>
+          <h3 className={styles.my_tit}>{userInfo.userName}</h3>
           <h3 className={styles.my_desc}>{userInfo.quotes}</h3>
           <div className={styles.my_guide}>
             <Link to="/my/art"><Button ghost size="small">文章</Button></Link>

@@ -10,7 +10,7 @@ module.exports = merge(common,{
     open: true,
     proxy: {
       '/clientApi': {
-        target: 'http://yapi.demo.qunar.com/mock/15646/' + 'client/api/',
+        target: 'http://localhost:3000/' + 'client/',
         changeOrigin: true,
         pathRewrite: { '^/clientApi': '' }
       }

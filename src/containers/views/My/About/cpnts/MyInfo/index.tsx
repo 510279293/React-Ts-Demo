@@ -14,7 +14,7 @@ class MyInfo extends React.Component{
       </dl>
       <p><i className="iconfont iconzhiye"></i>{userInfo.job_desc}</p>
       <p><i className="iconfont iconlike-1"></i>{userInfo.hobby}</p>
-      <p><i className="iconfont iconfenxiang"></i>总有一个意外，给你带来精彩</p>
+      <p><i className="iconfont iconfenxiang"></i>{userInfo.share||'总有一个意外，给你带来精彩'}</p>
       <p><i className="iconfont iconqianming"></i>{userInfo.quotes}</p>
       <p><i className="iconfont iconiconfront-"></i>{userInfo.location}</p>
     </div>)

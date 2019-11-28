@@ -2,8 +2,9 @@ import request from  '@utils/request';
 
 export async function articleList() {
   return request({
-    api: '/clientApi/article/list',
+    api: '/clientApi/art/list',
     disableCommonSuccessHandler: true,
+    method: 'POST',
   })
 }
 
