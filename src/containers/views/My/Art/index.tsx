@@ -12,6 +12,7 @@ class Art extends ComponentExt{
     this.state = {
       artList: [],
     }
+    // this.titltClick = this.titltClick.bind(this)
   }
   async articleListApi(){
     const { data } = await articleList();
@@ -22,11 +23,15 @@ class Art extends ComponentExt{
   componentDidMount() {
     this.articleListApi();
   }
+  titltClick(artId) {
+    // console.log(artId, this.props);
+    this.props.history.push(`/my/article/${artId}`)
+  }
   render(){
     return(<div className={styles.art}>
       <div className={styles.artListWarp}>
         {
-          this.state.artList.map((v: any, i: any) => <ArtList key={i} {...v} />)
+          this.state.artList.map((v: any, i: any) => <ArtList key={i} {...v} titltClick={() => this.titltClick(v.id)} />)
         }
       </div>
       <div className={styles.hotPart}>

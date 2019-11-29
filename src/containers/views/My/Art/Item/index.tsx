@@ -11,7 +11,9 @@ class ArtItem extends ComponentExt{
   }
   render(){
     return(<div>
-      <div className="con-txt marked-box" dangerouslySetInnerHTML={{__html:''}}></div>
+      <div className="con-txt marked-box" dangerouslySetInnerHTML={{__html:''}}>
+        
+      </div>
     </div>)
   }
 }

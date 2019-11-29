@@ -11,6 +11,7 @@ const Home = Loadable({loader: () => import('@views/Home'), loading: Load})
 const Page = Loadable({loader: () => import('@views/Page'), loading: Load})
 const My = Loadable({loader: () => import('@views/My'), loading: Load})
 const Art = Loadable({loader: () => import('@views/My/Art'), loading: Load})
+const ArtItem = Loadable({loader: () => import('@views/My/Art/Item'), loading: Load})
 const Filelog = Loadable({loader: () => import('@views/My/Filelog'), loading: Load})
 const About = Loadable({loader: () => import('@views/My/About'), loading: Load})
 const Feedme = Loadable({loader: () => import('@views/My/Feedme'), loading: Load})
@@ -46,6 +47,7 @@ interface Res {
            <Route path="/test" component={Counter} />
            <My path="/my" component={My}>
               <Route  path="/my/art" component={Art} />
+              <Route  path="/my/article/:artId" component={ArtItem} />
               <Route  path="/my/filelog" component={Filelog} />
               <Route  path="/my/about" component={About} />
               <Route  path="/my/feedme" component={Feedme} />
